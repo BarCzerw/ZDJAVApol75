@@ -1,4 +1,4 @@
-package com.sda.zaawansowane.dziedziczenie.zadanie1;
+package com.sda.zaawansowane.dziedziczenie.zajecia.zadanie1;
 
 public class Car {
 
