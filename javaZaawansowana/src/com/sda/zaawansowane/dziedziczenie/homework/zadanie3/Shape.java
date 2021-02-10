@@ -1,6 +1,6 @@
 package com.sda.zaawansowane.dziedziczenie.homework.zadanie3;
 
-public class Shape {
+public abstract class Shape {
 
     protected String color;
     protected boolean isColorFilled;
@@ -31,13 +31,9 @@ public class Shape {
         isColorFilled = colorFilled;
     }
 
-    public double getArea(){
-        return 0;
-    }
+    public abstract double getArea();
 
-    public double getPerimiter(){
-        return 0;
-    }
+    public abstract double getPerimiter();
 
     public void printGeometry(){
         System.out.println("Area=" + getArea());

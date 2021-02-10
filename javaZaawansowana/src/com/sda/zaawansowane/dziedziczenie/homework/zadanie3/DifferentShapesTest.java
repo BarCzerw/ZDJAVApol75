@@ -4,9 +4,10 @@ public class DifferentShapesTest {
 
     public static void main(String[] args) {
 
-        Shape sh1 = new Shape();
+        //shape is an abstract class and can no longer be instantiated
+        /*Shape sh1 = new Shape();
         System.out.println(sh1);
-        sh1.printGeometry();
+        sh1.printGeometry();*/
 
         Circle c1 = new Circle();
         System.out.println(c1);
