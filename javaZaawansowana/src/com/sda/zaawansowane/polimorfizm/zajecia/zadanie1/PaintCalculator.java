@@ -1,5 +1,7 @@
 package com.sda.zaawansowane.polimorfizm.zajecia.zadanie1;
 
+import java.util.Arrays;
+
 public class PaintCalculator {
 
     public static void main(String[] args) {
@@ -16,9 +18,10 @@ public class PaintCalculator {
         printFigures(area);
 
         System.out.println(bucketEfficiency + "-L paint buckets needed to cover area: " + paintNeeded(area, bucketEfficiency));
+        System.out.println(bucketEfficiency + "-L paint buckets needed to cover area: " + paintNeededStreamed(area, bucketEfficiency));
     }
 
-    public static double paintNeeded(Figure[] areaOfFigures, double bucketEfficiency) {
+    public static int paintNeeded(Figure[] areaOfFigures, double bucketEfficiency) {
         double sum = 0;
 
         for (Figure f :
@@ -26,7 +29,14 @@ public class PaintCalculator {
             sum += f.getArea();
         }
 
-        return Math.ceil(sum / bucketEfficiency);
+        return (int) Math.ceil(sum / bucketEfficiency);
+    }
+
+    public static int paintNeededStreamed(Figure[] areaOfFigures, double bucketEfficiency) {
+        return (int) Math.ceil(Arrays.stream(areaOfFigures)
+                .mapToDouble(Figure::getArea)
+                .sum()
+                / bucketEfficiency);
     }
 
     public static void printFigures(Figure[] figures) {
