@@ -11,14 +11,14 @@ public class PaintCalculator {
                 new Triangle(2, 4.4),
                 new Trapezoid(3.1, 1.6, 2.34)};
 
-        double bucketVolume = 10;
+        double bucketEfficiency = 10;
 
         printFigures(area);
 
-        System.out.println(bucketVolume + "-L paint buckets needed to cover area: " + paintNeeded(area, bucketVolume));
+        System.out.println(bucketEfficiency + "-L paint buckets needed to cover area: " + paintNeeded(area, bucketEfficiency));
     }
 
-    public static double paintNeeded(Figure[] areaOfFigures, double bucketVolume) {
+    public static double paintNeeded(Figure[] areaOfFigures, double bucketEfficiency) {
         double sum = 0;
 
         for (Figure f :
@@ -26,7 +26,7 @@ public class PaintCalculator {
             sum += f.getArea();
         }
 
-        return Math.ceil(sum / bucketVolume);
+        return Math.ceil(sum / bucketEfficiency);
     }
 
     public static void printFigures(Figure[] figures) {
