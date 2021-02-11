@@ -4,33 +4,43 @@ public class MainBiblioteka {
 
     public static void main(String[] args) {
 
-        Biblioteka biblioteka = new Biblioteka();
+        Library biblioteka = new Library();
 
-        Autor a1 = new Autor("Adam","Mickiewicz");
+        Author a1 = new Author("Adam", "Mickiewicz");
 
-        a1.dodajEgzemplarz(new Ksiazka("Dziady",450));
-        a1.dodajEgzemplarz(new Ksiazka("Pan Tadeusz",780));
-        a1.dodajEgzemplarz(new Ksiazka("Reduta Ordona",100));
+        a1.addCopy(new Book("Dziady", 450));
+        a1.addCopy(new Book("Pan Tadeusz", 780));
+        a1.addCopy(new Book("Reduta Ordona", 100));
 
-        Autor a2 = new Autor("Richard","Ordon");
+        Author a2 = new Author("Richard", "Ordon");
 
-        a2.dodajEgzemplarz(new Ksiazka("Szaman", 780));
-        a2.dodajEgzemplarz(new Czasopismo("Czasopismo o szamanie",48));
+        a2.addCopy(new Book("Szaman", 780));
+        a2.addCopy(new Magazine("Czasopismo o szamanie", 48));
 
-        Autor a3 = new Autor("Stefan","Zeromski");
+        Author a3 = new Author("Stefan", "Zeromski");
 
-        a3.dodajEgzemplarz(new Ksiazka("Ludzie bezdomni",120));
-        a3.dodajEgzemplarz(new Ksiazka("Przedwiosnie",250));
+        a3.addCopy(new Book("Ludzie bezdomni", 120));
+        a3.addCopy(new Book("Przedwiosnie", 250));
 
-        biblioteka.dodajAutora(a1);
-        biblioteka.dodajAutora(a2);
-        biblioteka.dodajAutora(a3);
+        biblioteka.addAuthor(a1);
+        biblioteka.addAuthor(a2);
+        biblioteka.addAuthor(a3);
 
-        biblioteka.szukajPoTytule("a");
-        biblioteka.szukajPoAutorze("zerom");
-        biblioteka.szukajPoAutorzeLubTytule("ordon");
-        System.out.println(biblioteka.znajdzAutoraONajwiekszymDorobku());
+        System.out.println("Searching copies by title \"a\"");
+        System.out.println(biblioteka.searchCopiesByTitle("a"));
+        System.out.println("----------------------------------");
 
+        System.out.println("Searching copies by author \"zerom\"");
+        System.out.println(biblioteka.searchCopiesByAuthor("zerom"));
+        System.out.println("----------------------------------");
+
+        System.out.println("Searching copies by phrase \"ordon\"");
+        System.out.println(biblioteka.searchCopiesByPhrase("ordon"));
+        System.out.println("----------------------------------");
+
+        System.out.println("Find author of most pages written");
+        System.out.println(biblioteka.findAuthorOfMostTotalPages());
+        System.out.println("----------------------------------");
     }
 
 }
