@@ -5,6 +5,6 @@ public interface TemperatureInformation {
     double getTemperature();
     default void printTemperature(){
         System.out.println("Current temperature - " + getTemperature() );
-    };
+    }
 
 }

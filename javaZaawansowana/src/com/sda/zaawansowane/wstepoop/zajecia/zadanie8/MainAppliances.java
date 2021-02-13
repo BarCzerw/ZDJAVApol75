@@ -14,6 +14,9 @@ public class MainAppliances {
                 new AirConditioning(23)
         };
 
+        appliances[0].printTemperature();
+        System.out.println("------------");
+
         for (int i = 0; i < 10; i++) {
             for (Appliance appliance : appliances) {
                 if (appliance instanceof HeatsUp) {
