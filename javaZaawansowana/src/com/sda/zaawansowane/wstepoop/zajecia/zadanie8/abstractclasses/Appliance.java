@@ -1,8 +1,6 @@
 package com.sda.zaawansowane.wstepoop.zajecia.zadanie8.abstractclasses;
 
-import com.sda.zaawansowane.wstepoop.zajecia.zadanie8.interfaces.TemperatureInformation;
-
-public abstract class Appliance implements TemperatureInformation {
+public abstract class Appliance {
 
     protected double temperature;
 
@@ -10,8 +8,11 @@ public abstract class Appliance implements TemperatureInformation {
         this.temperature = temperature;
     }
 
-    @Override
     public double getTemperature() {
         return temperature;
+    }
+
+    public void printTemperature() {
+        System.out.println("Current temperature - " + getTemperature());
     }
 }
