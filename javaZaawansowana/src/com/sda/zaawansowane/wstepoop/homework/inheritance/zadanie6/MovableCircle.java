@@ -1,4 +1,4 @@
-package com.sda.zaawansowane.wstepoop.homework.zadanie6;
+package com.sda.zaawansowane.wstepoop.homework.inheritance.zadanie6;
 
 public class MovableCircle implements Movable {
 

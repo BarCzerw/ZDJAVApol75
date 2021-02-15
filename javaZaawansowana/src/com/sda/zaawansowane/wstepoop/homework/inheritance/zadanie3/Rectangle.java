@@ -1,4 +1,4 @@
-package com.sda.zaawansowane.wstepoop.homework.zadanie3;
+package com.sda.zaawansowane.wstepoop.homework.inheritance.zadanie3;
 
 public class Rectangle extends Shape{
 

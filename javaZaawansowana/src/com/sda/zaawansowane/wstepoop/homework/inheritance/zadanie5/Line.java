@@ -1,6 +1,6 @@
-package com.sda.zaawansowane.wstepoop.homework.zadanie5;
+package com.sda.zaawansowane.wstepoop.homework.inheritance.zadanie5;
 
-import com.sda.zaawansowane.wstepoop.homework.zadanie1.Point2D;
+import com.sda.zaawansowane.wstepoop.homework.inheritance.zadanie1.Point2D;
 
 public class Line {
 

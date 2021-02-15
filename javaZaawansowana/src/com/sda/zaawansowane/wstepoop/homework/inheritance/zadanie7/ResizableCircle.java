@@ -1,4 +1,4 @@
-package com.sda.zaawansowane.wstepoop.homework.zadanie7;
+package com.sda.zaawansowane.wstepoop.homework.inheritance.zadanie7;
 
 public class ResizableCircle extends Circle implements Resizable{
 

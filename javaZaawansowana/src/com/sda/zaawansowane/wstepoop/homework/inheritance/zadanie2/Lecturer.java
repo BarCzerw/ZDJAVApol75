@@ -1,4 +1,4 @@
-package com.sda.zaawansowane.wstepoop.homework.zadanie2;
+package com.sda.zaawansowane.wstepoop.homework.inheritance.zadanie2;
 
 public class Lecturer extends Person{
 

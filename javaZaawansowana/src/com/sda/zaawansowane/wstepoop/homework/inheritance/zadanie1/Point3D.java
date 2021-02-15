@@ -1,4 +1,4 @@
-package com.sda.zaawansowane.wstepoop.homework.zadanie1;
+package com.sda.zaawansowane.wstepoop.homework.inheritance.zadanie1;
 
 public class Point3D extends Point2D {
 
