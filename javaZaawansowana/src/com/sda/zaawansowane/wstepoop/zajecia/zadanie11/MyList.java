@@ -1,8 +1,5 @@
 package com.sda.zaawansowane.wstepoop.zajecia.zadanie11;
 
-import java.lang.reflect.Array;
-import java.util.Arrays;
-
 public class MyList<E> {
 
     private int itemsCount;
