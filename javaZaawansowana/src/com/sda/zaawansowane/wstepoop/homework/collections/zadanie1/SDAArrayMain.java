@@ -9,8 +9,8 @@ public class SDAArrayMain {
         integerList.display();
 
         for (int i = 0; i < 20; i++) {
-            System.out.println("Adding " + i + " to array");
-            integerList.add(i);
+            System.out.println("Adding " + i / 3 + " to array");
+            integerList.add(i / 3);
             System.out.print("Current size - " + integerList.size() + " - ");
             integerList.display();
             System.out.println("------------------------------------------");
@@ -26,7 +26,7 @@ public class SDAArrayMain {
             System.out.println("------------------------------------------");
         }
 
-        Integer[] elementsToErase = new Integer[]{5, 3, 21};
+        Integer[] elementsToErase = new Integer[]{0, 0, 1, 7};
 
         for (Integer i : elementsToErase) {
             System.out.println("Removing element " + i + " from array - " + integerList.remove(i));
