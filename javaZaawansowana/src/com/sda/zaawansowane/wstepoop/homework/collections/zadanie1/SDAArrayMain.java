@@ -17,7 +17,7 @@ public class SDAArrayMain {
         }
 
 
-        int[] indexToErase = new int[]{5,8,15,1,16};
+        int[] indexToErase = new int[]{5, 8, 15, 1, 16};
 
         for (int i : indexToErase) {
             System.out.println("Removing index " + i + " from array - " + integerList.remove(i));
@@ -26,7 +26,7 @@ public class SDAArrayMain {
             System.out.println("------------------------------------------");
         }
 
-        Integer[] elementsToErase = new Integer[]{5,3,21};
+        Integer[] elementsToErase = new Integer[]{5, 3, 21};
 
         for (Integer i : elementsToErase) {
             System.out.println("Removing element " + i + " from array - " + integerList.remove(i));
@@ -35,7 +35,13 @@ public class SDAArrayMain {
             System.out.println("------------------------------------------");
         }
 
+        int[] indexToGet = new int[]{0, 5, 10, 15};
 
+        integerList.display();
+        for (int i : indexToGet) {
+            System.out.println("Getting index " + i + " from array - " + integerList.get(i));
+        }
+        System.out.println("------------------------------------------");
     }
 
 
