@@ -14,8 +14,8 @@ public class BookService {
         return bookSet.remove(book);
     }
 
-    public Set<Book> getBookSet() {
-        return bookSet;
+    public List<Book> getBookSet() {
+        return new ArrayList<>(bookSet);
     }
 
     public Set<Book> getBooksOfGenre(Genre genre) {
@@ -77,16 +77,16 @@ public class BookService {
         return books;
     }
 
-    public Set<Book> getSortedBookList(boolean isAscending) {
+    public List<Book> getSortedBookList(boolean isAscending) {
         int sortModifier = isAscending ? 1 : -1;
 
-        Set<Book> books = new TreeSet<>(new Comparator<Book>() {
+        List<Book> books = new ArrayList<>(bookSet);
+        Collections.sort(books, new Comparator<Book>() {
             @Override
             public int compare(Book o1, Book o2) {
                 return sortModifier * o1.getName().compareTo(o2.getName());
             }
         });
-        books.addAll(bookSet);
         return books;
     }
 
@@ -94,8 +94,8 @@ public class BookService {
         return bookSet.contains(book);
     }
 
-    public Set<Book> getBooksOfAuthor(Author author) {
-        Set<Book> books = new LinkedHashSet<>();
+    public List<Book> getBooksOfAuthor(Author author) {
+        List<Book> books = new ArrayList<>();
 
         for (Book book : bookSet) {
             if (book.getAuthors().contains(author)) {
@@ -105,22 +105,14 @@ public class BookService {
         return books;
     }
 
-    public void printAllBooks(){
+    //zadanie 4
+    public Map<String, Genre> getMapOfBooks() {
+        Map<String, Genre> map = new HashMap<>();
+
         for (Book book : bookSet) {
-            System.out.println(book);
+            map.put(book.getName(), book.getGenre());
         }
-    }
-
-    public void printAllBooksAscending(){
-        for (Book book : getSortedBookList(true)) {
-            System.out.println(book);
-        }
-    }
-
-    public void printAllBooksDescending(){
-        for (Book book : getSortedBookList(false)) {
-            System.out.println(book);
-        }
+        return map;
     }
 
 }

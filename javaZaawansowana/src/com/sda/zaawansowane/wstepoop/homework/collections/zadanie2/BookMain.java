@@ -1,5 +1,8 @@
 package com.sda.zaawansowane.wstepoop.homework.collections.zadanie2;
 
+import java.util.List;
+import java.util.Map;
+
 public class BookMain {
 
     static BookService BS = new BookService();
@@ -68,12 +71,12 @@ public class BookMain {
         BS.addBook(combinded4);
 
         System.out.println("-------------ALL-BOOKS--------------");
-        BS.printAllBooks();
+        printList(BS.getBookSet());
         System.out.println("------------------------------------");
 
         System.out.println("-----------REMOVING-BOOK------------");
         BS.removeBook(b2);
-        BS.printAllBooks();
+        printList(BS.getBookSet());
         System.out.println("Adding again");
         BS.addBook(b2);
         System.out.println("------------------------------------");
@@ -103,11 +106,11 @@ public class BookMain {
         System.out.println("------------------------------------");
 
         System.out.println("------GET-ALL-BOOKS-SORTED-ASC------");
-        BS.printAllBooksAscending();
+        printList(BS.getSortedBookList(true));
         System.out.println("------------------------------------");
 
         System.out.println("------GET-ALL-BOOKS-SORTED-DESC-----");
-        BS.printAllBooksDescending();
+        printList(BS.getSortedBookList(false));
         System.out.println("------------------------------------");
 
         System.out.println("---------DOES-CONTAIN-(TRUE)--------");
@@ -130,8 +133,25 @@ public class BookMain {
 
 
         System.out.println("------------BOOKS-OF-AUTHOR---------");
-        System.out.println(BS.getBooksOfAuthor(new Author("Remigiusz", "Mróz", "Male")));
+        printList(BS.getBooksOfAuthor(new Author("Remigiusz", "Mróz", "Male")));
         System.out.println("------------------------------------");
 
+        System.out.println("-------BOOKS-MAPPED-NAME>GENRE------");
+        printMap(BS.getMapOfBooks());
+        System.out.println("------------------------------------");
+
+
+    }
+
+    public static <E> void printList(List<E> list) {
+        for (E e : list) {
+            System.out.println(e);
+        }
+    }
+
+    public static <K, V> void printMap(Map<K, V> map) {
+        for (Map.Entry<K, V> kvEntry : map.entrySet()) {
+            System.out.println(kvEntry.getKey() + " - " + kvEntry.getValue());
+        }
     }
 }
