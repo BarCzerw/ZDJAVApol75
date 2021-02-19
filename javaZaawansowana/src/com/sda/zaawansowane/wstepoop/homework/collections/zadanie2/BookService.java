@@ -115,4 +115,16 @@ public class BookService {
         return map;
     }
 
+    //zadanie 5
+    public List<Book> getBooksByValue(){
+        List<Book> books = new ArrayList<>(bookSet);
+        Collections.sort(books, new Comparator<Book>() {
+            @Override
+            public int compare(Book o1, Book o2) {
+                return -Float.compare(o1.getPrice(),o2.getPrice());
+            }
+        });
+        return books;
+    }
+
 }

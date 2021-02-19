@@ -140,7 +140,9 @@ public class BookMain {
         printMap(BS.getMapOfBooks());
         System.out.println("------------------------------------");
 
-
+        System.out.println("--------BOOKS-SORTED-BY-PRICE-------");
+        printList(BS.getBooksByValue());
+        System.out.println("------------------------------------");
     }
 
     public static <E> void printList(List<E> list) {
