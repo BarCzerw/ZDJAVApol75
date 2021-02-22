@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/ZDJAVApol75.iml" filepath="$PROJECT_DIR$/.idea/ZDJAVApol75.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ZDJAVApol75.iml" filepath="$PROJECT_DIR$/ZDJAVApol75.iml" />
       <module fileurl="file://$PROJECT_DIR$/javaPodstawyTestowanie/javaPodstawyTestowanie.iml" filepath="$PROJECT_DIR$/javaPodstawyTestowanie/javaPodstawyTestowanie.iml" />
       <module fileurl="file://$PROJECT_DIR$/javaZaawansowana/javaZaawansowana.iml" filepath="$PROJECT_DIR$/javaZaawansowana/javaZaawansowana.iml" />
     </modules>
