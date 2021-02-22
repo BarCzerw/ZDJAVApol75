@@ -1,4 +1,4 @@
-package com.sda.programowanie.enumsy.zadanie2;
+package com.sda.zaawansowane.wstepoop.homework.enums.zadanie2;
 
 public class PackageTestMain {
 

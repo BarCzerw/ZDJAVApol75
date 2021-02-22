@@ -1,4 +1,4 @@
-package com.sda.programowanie.enumsy.zadanie1;
+package com.sda.zaawansowane.wstepoop.homework.enums.zadanie1;
 
 public class WeekdayTester {
 
