@@ -1,4 +1,4 @@
-package inputoutput.zadanie;
+package wstepoop.zajecia.inputoutput.zadanie1;
 
 import java.io.IOException;
 import java.nio.file.Files;

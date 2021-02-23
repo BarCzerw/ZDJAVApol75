@@ -1,4 +1,4 @@
-package inputoutput.zadanie;
+package wstepoop.zajecia.inputoutput.zadanie1;
 
 public class TeamResult {
 
