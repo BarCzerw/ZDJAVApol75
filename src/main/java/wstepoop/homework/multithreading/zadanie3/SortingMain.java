@@ -1,4 +1,4 @@
-package wstepoop.zajecia.threading.zadanie3;
+package wstepoop.homework.multithreading.zadanie3;
 
 import java.util.Arrays;
 import java.util.Random;

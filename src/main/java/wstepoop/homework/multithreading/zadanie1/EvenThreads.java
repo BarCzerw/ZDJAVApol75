@@ -1,4 +1,4 @@
-package wstepoop.zajecia.threading.zadanie1;
+package wstepoop.homework.multithreading.zadanie1;
 
 public class EvenThreads {
 

@@ -1,6 +1,4 @@
-package wstepoop.zajecia.threading.zadanie2;
-
-import wstepoop.homework.interfaces.zadanie3.CarType;
+package wstepoop.homework.multithreading.zadanie2;
 
 import java.util.ArrayList;
 import java.util.List;

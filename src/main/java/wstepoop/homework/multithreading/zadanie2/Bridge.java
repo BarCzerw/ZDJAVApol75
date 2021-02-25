@@ -1,4 +1,4 @@
-package wstepoop.zajecia.threading.zadanie2;
+package wstepoop.homework.multithreading.zadanie2;
 
 public class Bridge {
 

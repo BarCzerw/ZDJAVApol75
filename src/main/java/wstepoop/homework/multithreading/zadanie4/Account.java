@@ -1,4 +1,4 @@
-package wstepoop.zajecia.threading.zadanie4;
+package wstepoop.homework.multithreading.zadanie4;
 
 public class Account {
 
