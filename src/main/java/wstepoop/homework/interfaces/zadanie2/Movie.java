@@ -1,6 +1,8 @@
 package wstepoop.homework.interfaces.zadanie2;
 
-public class Movie {
+import java.io.Serializable;
+
+public class Movie implements Serializable {
 
     private String title;
     private int productionYear;
