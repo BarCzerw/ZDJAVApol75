@@ -20,11 +20,21 @@ public class AtomicIterator<T> {
         }
     }
 
-    public T previous() {
+    public T prev() {
         if (index.get() > 0 && index.get() < data.length) {
             return data[index.getAndDecrement()];
         } else {
             throw new IndexOutOfBoundsException();
         }
+    }
+
+    public boolean hasNext() {
+        synchronized (this) {
+            return index.get() < data.length;
+        }
+    }
+
+    public boolean hasPrev() {
+        return index.get() > 0;
     }
 }
